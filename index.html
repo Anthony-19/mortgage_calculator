@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <title>Mortgage Payment</title>
+</head>
+<body>
+    <div class="container">
+        <div class="container-1">
+            <form action="" method="post" class="form">
+                <header class="form-header">
+                    <h2 class="form-title">Mortgage Calculator</h2>
+                    <a href="" class="clear-all">Clear all</a>
+                </header>
+                <main class="form-body">
+                    <section class="form-group mortgage-account">
+                        <label for="account" class="account">Mortgage Account</label>
+                        <div class="euros">
+                            <input type="text" name="account" id="account">
+                            <label for="account" class="euro-label">
+                                &euro;
+                                <!-- <i class="bi bi-currency-euro euros"></i> -->
+                            </label>
+                        </div>
+                        <div class="error">
+                            
+                        </div>
+                    </section>
+                    <section class="form-group mortgage-details">
+                        <div class="mortgage-term">
+                            <label for="term" class="term">Mortgage Terms</label>
+                            <div class="mortgage-list">
+                                <input type="text" name="term" id="term">
+                                <label for="" class="years">years</label>
+                            </div>
+                            <div class="error">
+                        
+                            </div>
+                        </div>
+                        <div class="interest-rate">
+                            <label for="rate" class="rate">Mortgage Rate</label>
+                            <div class="mortgage-list">
+                                <input type="text" name="rate" id="rate">
+                                <label for="" class="percentage">%</label>
+                            </div>
+                            <div class="error">
+
+                            </div>
+                        </div>
+                    </section>
+                    <section class="form-group mortgage-type">
+                        <label for="" class="type">Mortgage Type</label>
+                        <div class="radio-group">
+                            <div class="radio-list">
+                                <input type="radio" name="payment-type" id="repayment" value="repayment">
+                                <label for="repayment" class="repayment">
+                                    <span class="radio-btn"></span>
+                                        Repayment
+                                </label>
+                             </div>
+                            </label>
+                            <div class="radio-list">
+                                <input type="radio" name="payment-type" id="interest-only" value="interest">
+                                <label for="interest-only" class="interest-only">
+                                    <span class="radio-btn"></span> Interest Only
+                                </label>
+                            </div>
+                        </div>
+                        <div class="error">
+                            
+                        </div>
+                    </section>
+                </main>
+                <button type="button" class="calculate">
+                    <img src="./asset/images/icon-calculator.svg" alt="icon-calculator" class="icon-calculate">
+                    Calculate Repayments
+                </button>
+                
+            </form>
+            <section class="result-placeholder">
+                <img src="./asset/images/illustration-empty.svg" alt="illustration" class="illustration">
+                <h3 class="placeholder-title">Results shown here</h3>
+                <p class="placeholder-text">Complete the form and click "calculate repayments" to see what your monthly repayments would be.</p>
+            </section>
+            <section class="result-page" style="display: none;">
+             
+            </section>
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,392 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap');
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing: border-box; 
+}
+html{
+    font-size: 16px;
+}
+body{
+    background-color: hsl(202, 86%, 94%);
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+.container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: wrap;
+    flex-direction: column;
+    min-height: 100vh;
+}
+.container-1 {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    background-color: hsl(0, 0%, 100%);
+    margin: 2rem;
+    border-radius: 2rem 2rem 2rem 2rem;
+    width: 100%;
+    max-width: 70%;
+}
+.form{
+    background-color: hsl(0, 0%, 100%);
+    padding: 2rem;
+    border-radius: 2rem 0 0 2rem;
+}
+.result-placeholder,
+.result-page {
+    background-color: hsl(202, 55%, 16%);
+    border-radius: 0 2rem 2rem 6rem;
+    color: hsl(0, 0%, 100%);
+    padding: 2rem;
+}
+.form-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+h2{
+    color: hsl(202, 55%, 16%);
+    font-size: 1.1rem;
+    font-weight: 900;
+}
+a,
+label{
+    color: hsl(200, 24%, 40%);
+    font-size: 0.7rem;
+    font-weight: 500;
+}
+.form-body{
+    margin-top: 1rem;
+}
+.form-group{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+.mortgage-account{
+    width: 100%;
+}
+.euros{
+    max-width: 100%;
+    position: relative;
+}
+.euros input
+{
+    width: 100%;
+    max-width: 100%;
+    height: 1.9rem;
+    border: 1.5px solid hsl(200, 24%, 40%);
+    border-radius: 0.2rem;
+    text-indent: 2.5rem;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: hsl(202, 55%, 16%);
+    font-weight: 700;
+}
+.euro-label{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 1.1px;
+    width: 100%;
+    max-width: 2rem;
+    background-color: hsl(202, 86%, 94%);
+    height: 1.68rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: hsl(202, 55%, 16%);
+    font-weight: 700;
+}
+
+.mortgage-term input,
+.interest-rate input{
+    height: 1.9rem;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: hsl(202, 55%, 16%);
+    font-weight: 700;
+    border: 1.5px solid hsl(200, 24%, 40%);
+    width: 100%;
+    max-width: 100%;
+    border-radius: 0.2rem;
+    padding-left: 0.5rem;
+    padding-right: 4rem;
+}
+.interest-rate input{
+    padding-left: 0.5rem;
+    padding-right: 2rem;
+}
+.mortgage-term input:focus,
+.interest-rate input:focus,
+.euros input:focus{
+    outline: none;
+    border-color: hsl(61, 70%, 52%); 
+}
+
+.mortgage-details{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    margin: 0.5rem 0;
+}
+.mortgage-term{
+    width: 100%;
+    max-width: 45%;
+}
+.interest-rate{
+    width: 100%;
+    max-width: 45%;
+}
+.mortgage-list{
+    position: relative;
+    margin-top: 0.3rem;
+}
+.percentage,
+.years{
+    position: absolute;
+    right: 1.4px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: hsl(202, 86%, 94%);
+    height: 1.7rem;
+    width: 100%;
+    max-width: 15%;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: hsl(202, 55%, 16%);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.years{
+    max-width: 30%; 
+}
+.account,
+.type{
+    padding-bottom: 0.4rem;
+}
+
+.radio-group{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: start;
+    width: 100%;
+}
+.repayment,
+.interest-only{
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    flex-direction: row;
+    border: 1.5px solid;
+    width: 100%;
+    max-width: 100%;
+    padding: 1rem;
+    border-radius: 0.2rem;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    color: hsl(202, 55%, 16%);
+    column-gap: 0.5rem;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+.repayment{
+    margin-bottom: 0.3rem;
+}
+.radio-group input{
+    display: none;
+}
+.radio-btn{
+    height: 14px;
+    width: 14px;
+    border: 1.5px solid hsl(202, 55%, 16%);
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+.radio-list{
+    width: 100%;
+}
+.radio-group label{
+    width: 100%;
+    max-width: 100%;
+}
+
+.repayment:hover,
+.interest-only:hover{
+    color: hsl(202, 55%, 16%);
+    border: 1.5px solid hsl(61, 70%, 52%); 
+}
+
+input[type="radio"]:checked + label{
+    border: 1.5px solid hsl(61, 70%, 52%);
+    background-color: hsl(61, 70%, 52%,0.1);
+}
+input[type="radio"]:checked + label .radio-btn{
+    border: 1.5px solid hsl(61, 70%, 52%);
+}
+input[type="radio"]:checked + label .radio-btn::before{
+    content: "";
+    height: 6px;
+    width: 6px;
+    border: 0.5px solid hsl(61, 70%, 52%);
+    border-radius: 50%;
+    background-color: hsl(61, 70%, 52%);
+}
+
+.calculate{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    column-gap: 0.5rem;
+    flex-wrap: wrap-reverse;
+    width: 100%;
+    max-width: 75%;
+    border-radius: 2rem;
+    padding: 0.5rem;
+    margin-top: 2rem;
+    color: hsl(202, 55%, 16%);
+    background-color: hsl(61, 70%, 52%);
+    border: none;
+    font-family: "Plus Jakarta Sans", sans-serif;
+    font-weight: 700;
+    font-size: 0.85rem;
+    cursor: pointer;
+}
+.result-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.illustration{
+    width: 100%;
+    max-width: 30%;
+}
+.placeholder-title{
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    font-family: inherit;
+    padding: 1rem;
+}
+.placeholder-text{
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 100;
+    font-family: inherit;
+    text-align: center;
+}
+.result-title{
+    font-weight: 700;
+    font-size: 0.9rem;
+}
+.result-description{
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: hsl(203, 41%, 72%);
+    padding: 1rem 0 1.2rem 0;
+}
+
+.result-summary{
+    background-color: rgb(14, 36, 49);
+    padding: 2rem;
+    border-radius: 1rem;
+    box-shadow: 0px -2px 0px 0px hsl(61, 70%, 52%);
+}
+
+.result-summary p{
+    font-size: 0.7rem;
+    font-weight: 600;
+    color: hsl(203, 41%, 72%);
+    padding: 1rem 0 1.2rem 0;
+}
+.result-summary h2{
+    color: hsl(61, 70%, 52%);
+    font-size: 2.5rem;
+}
+.result-label {
+    padding: 0px !important;
+    margin: 0px !important;
+    padding-bottom: 0.7rem !important;
+}
+hr{
+    margin: 2rem 0;
+}
+.over-term {
+    padding: 0px !important;
+    margin: 0px !important;
+    padding-bottom: 0.1rem !important;
+}
+.error p {
+    color: red;
+    font-size: 0.7rem;
+}
+.result-placeholder.active{
+    display: none;
+}
+.result-page.active{
+    display: block;
+}
+@media screen and (max-width: 943px) {
+    .container-1 {
+        width: 100%;
+        max-width: 80%;
+    }
+}
+@media screen and (max-width: 833px) {
+    .container-1 {
+        width: 100%;
+        max-width: 90%;
+    }
+}
+@media screen and (max-width: 741px) {
+    .container-1 {
+        width: 100%;
+        max-width: 100%;
+    }
+}
+@media screen and (max-width: 656px) {
+    .container-1 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 70%;
+        /* overflow-y: scroll; */
+    }
+    .result-page,
+    .result-placeholder{
+        border-radius: 0;
+    }
+    .form{
+            border-radius: 1rem 1rem 0 0;
+        }
+}
+@media screen and (max-width: 480px) {
+    .container-1 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 90%;
+        overflow-y: scroll;
+    }
+}
+@media screen and (max-width: 395px) {
+    .container-1 {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 100%;
+        overflow-y: scroll;
+    }
+}
+
+
+
